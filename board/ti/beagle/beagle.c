@@ -116,7 +116,7 @@ int board_init(void)
  */
 static int get_board_revision(void)
 {
-	static int revision = -1;
+	/* static int revision = -1;
 
 	if (revision == -1) {
 		if (!gpio_request(171, "rev0") &&
@@ -132,9 +132,9 @@ static int get_board_revision(void)
 		} else {
 			printf("Error: unable to acquire board revision GPIOs\n");
 		}
-	}
+	} */
 
-	return revision;
+	return REVISION_XM_C;
 }
 
 #ifdef CONFIG_SPL_BUILD
