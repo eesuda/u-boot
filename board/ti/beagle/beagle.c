@@ -181,7 +181,7 @@ void get_board_mem_timings(struct board_sdrc_timings *timings)
 		}
 	case REVISION_XM_AB:
 	case REVISION_XM_C:
-		if (pop_mfr == 0) {
+		if (pop_mfr == 0 || (pop_mfr == NAND_MFR_MICRON && pop_id == 0xbc)) {
 			/* 256MB DDR */
 			timings->mcfg = MICRON_V_MCFG_200(256 << 20);
 			timings->ctrla = MICRON_V_ACTIMA_200;
